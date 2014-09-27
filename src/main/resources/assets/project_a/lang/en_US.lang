@@ -1,0 +1,13 @@
+item.CrystalPickaxe.name=Crystal Pickaxe
+item.CrystalAxe.name=Crystal Axe
+item.CrystalShovel.name=Crystal Shovel
+item.StoneHammer.name=Stone Hammer
+item.CompressedCoal1.name=Compressed Coal X1
+item.CompressedCoal2.name=Compressed Coal X2
+item.CompressedCoal3.name=Compressed Coal X3
+item.CompressedCoal4.name=Compressed Coal X4
+item.CrystalSword.name=Crystal Sword
+item.LightningRod.name=Lightning Rod
+item.Crystal.name=Crystal
+itemGroup.ProjectAdding=Project Adding
+tile.CrystalBlock.name=Crystal Block
