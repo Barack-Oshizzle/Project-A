@@ -18,7 +18,7 @@ public class StoneHammer extends Item{
 		setCreativeTab(Project_A.projectATab);
 		setContainerItem(this);
 		setMaxDamage(131);
-		
+		setMaxStackSize(1);
 	}
 
 	@Override

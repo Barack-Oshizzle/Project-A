@@ -15,6 +15,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.BarackOshizzle.ProjectA.Blocks.CrystalBlock;
 import com.BarackOshizzle.ProjectA.Items.Crystal;
 import com.BarackOshizzle.ProjectA.Proxies.CommonProxy;
+import com.BarackOshizzle.ProjectA.Tools.Chisel;
 import com.BarackOshizzle.ProjectA.Tools.CrystalAxe;
 import com.BarackOshizzle.ProjectA.Tools.CrystalPickaxe;
 import com.BarackOshizzle.ProjectA.Tools.CrystalShovel;
@@ -62,6 +63,7 @@ public class Project_A {
 	public static ToolMaterial combatMaterial = EnumHelper.addToolMaterial("Combat Material", 4, 4000, 10, 8.0F, 32);
 	public static Item crystalPickaxe = new CrystalPickaxe(toolMaterial).setUnlocalizedName("CrystalPickaxe");
 	public static Item stoneHammer = new StoneHammer().setUnlocalizedName("StoneHammer");
+	public static Item chisel = new Chisel().setUnlocalizedName("Chisel");
 	public static Item crystalSword = new CrystalSword(combatMaterial).setUnlocalizedName("CrystalSword");
 	public static Item crystalShovel = new CrystalShovel(toolMaterial).setUnlocalizedName("CrystalShovel");
 	public static Item crystalAxe = new CrystalAxe(toolMaterial).setUnlocalizedName("CrystalAxe");
@@ -82,6 +84,7 @@ public class Project_A {
 		GameRegistry.registerItem(stoneHammer, "Stone Hammer");
 		GameRegistry.registerItem(crystalSword, "Crystal Sword");
 		GameRegistry.registerItem(crystal, "Crystal");
+		GameRegistry.registerItem(chisel, "Chisel");
 		
 		GameRegistry.registerBlock(crystalBlock, "Crystal Block");
 		
@@ -162,7 +165,8 @@ public class Project_A {
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(crystal, 9), new ItemStack(crystalBlock));
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.iron_block, 9), new ItemStack(stoneHammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(crystalBlock));
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.cobblestone, 1), new ItemStack(stoneHammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone));
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone, 1), new ItemStack(chisel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.cobblestone));
 		
 		
 	}

@@ -27,7 +27,6 @@ public class CrystalBlock extends Block {
 		setLightLevel(4.0F);
 		setHardness(2.0F);
 		
-		
 	}
 	
 }
