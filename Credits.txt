@@ -1,1 +1,0 @@
-The GUIs was made using Condor's help. I did use a bit of code from him (with his permission).
