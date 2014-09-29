@@ -12,7 +12,7 @@ import net.minecraft.util.IChatComponent;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 
-import com.BarackOshizzle.ProjectA.Blocks.CrystalBlock;
+import com.BarackOshizzle.ProjectA.BlocksAndTileEntities.StorageUnitBlock;
 import com.BarackOshizzle.ProjectA.Items.Crystal;
 import com.BarackOshizzle.ProjectA.Proxies.CommonProxy;
 import com.BarackOshizzle.ProjectA.Tools.Chisel;
@@ -68,7 +68,7 @@ public class Project_A {
 	public static Item crystalShovel = new CrystalShovel(toolMaterial).setUnlocalizedName("CrystalShovel");
 	public static Item crystalAxe = new CrystalAxe(toolMaterial).setUnlocalizedName("CrystalAxe");
 	
-	public static Block crystalBlock = new CrystalBlock(Material.rock).setBlockName("CrystalBlock");
+	public static Block storageUnit = new StorageUnitBlock(Material.rock).setBlockName("StorageUnit");
 	
 	public static Item crystal = new Crystal().setUnlocalizedName("Crystal");
 	
@@ -76,7 +76,6 @@ public class Project_A {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		
 		
 		GameRegistry.registerItem(crystalPickaxe, "Crystal Pickaxe");
 		GameRegistry.registerItem(crystalShovel, "Crystal Shovel");
@@ -86,7 +85,7 @@ public class Project_A {
 		GameRegistry.registerItem(crystal, "Crystal");
 		GameRegistry.registerItem(chisel, "Chisel");
 		
-		GameRegistry.registerBlock(crystalBlock, "Crystal Block");
+		GameRegistry.registerBlock(storageUnit, "Storage Unit");
 		
 	}
 	
@@ -143,13 +142,13 @@ public class Project_A {
 			
 		});
 		
-		GameRegistry.addRecipe(new ItemStack(crystalBlock), new Object[] {
+		GameRegistry.addRecipe(new ItemStack(storageUnit), new Object[] {
 			
-			"XXX",
-			"XXX",
+			"XYX",
+			"XZX",
 			"XXX",
 			
-			'X', crystal
+			'X',Blocks.stone, 'Y', Items.redstone, 'Z', Items.iron_ingot
 			
 		});
 		
@@ -163,11 +162,11 @@ public class Project_A {
 			
 		});
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(crystal, 9), new ItemStack(crystalBlock));
-		
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.cobblestone, 1), new ItemStack(stoneHammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone));
 		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.stone, 1), new ItemStack(chisel, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.cobblestone));
 		
+		proxy.registerTileEntities();
+		proxy.registerGuiHandler();
 		
 	}
 	

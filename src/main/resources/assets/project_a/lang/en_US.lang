@@ -7,4 +7,4 @@ item.CrystalSword.name=Crystal Sword
 item.LightningRod.name=Lightning Rod
 item.Crystal.name=Crystal
 itemGroup.ProjectAdding=Project Adding
-tile.CrystalBlock.name=Crystal Block
+tile.StorageUnit.name=Storage Unit
