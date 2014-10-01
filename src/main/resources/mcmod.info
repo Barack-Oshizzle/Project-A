@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "project_a",
+  "name": "Project A",
+  "description": "This is a mod that adds a variety of things. Such as a storage unit that acts like a chest to a whole toolset.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["BarackOshizzle"],
+  "credits": "CondorCraft110",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

@@ -1,0 +1,2 @@
+1. The storage unit doesn't drop contents when broken.
+2. Shift - clicking items into the storage unit causes the game to crash.
